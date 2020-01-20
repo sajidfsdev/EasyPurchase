@@ -1,0 +1,23 @@
+.topBar{
+    width:100%;
+    padding:2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 5px 10px #888888
+}
+
+.leftContent{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.horizontalPadding{
+    width:10px;
+}
+
+.adjustments{
+    margin-top: 3px;
+}
