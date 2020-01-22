@@ -1,0 +1,12 @@
+.btn{
+    margin-top: 20px;
+}
+
+
+.screen{
+    border:1px solid;
+    width:100%;
+    margin-top: 30px;
+    height:450px;
+    overflow: auto;
+}

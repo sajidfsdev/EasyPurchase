@@ -1,8 +1,10 @@
 import React from 'react';
+import { Switch,Route } from 'react-router-dom';
 import classes from './Grid.module.css';
 
 import TopBar from '../Components/Grid/TopBar/TopBar';
 import Nav from '../Components/Grid/Nav/Nav';
+import Categories from '../Pages/Categories/cat';
 
 const Grid=(props)=>{
 
@@ -21,7 +23,11 @@ const Grid=(props)=>{
                 <div className={classes.leftContainer}>
                     <Nav />
                 </div>
-                <div className={classes.rightContainer}>Right container</div>
+                <div className={classes.rightContainer}>
+                    <Switch>
+                        <Route exact path="/" component={Categories} />
+                    </Switch>
+                </div>
             </div>
             {/* Left right grid ends here...... */}
 

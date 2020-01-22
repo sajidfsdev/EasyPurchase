@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 //pages imports......
 import LoginPage from './Pages/Login/Login';
@@ -9,7 +10,9 @@ const App=(props)=>{
   //return statement starts here......
   return (
     <React.Fragment>
-            <Grid />
+           <BrowserRouter>
+              <Grid />
+           </BrowserRouter>
     </React.Fragment>
   );
   //return statement ends here........
