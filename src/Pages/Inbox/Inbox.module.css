@@ -1,0 +1,22 @@
+.heading{
+    width:100%;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color:rgb(0, 128, 64);
+}
+
+.screen{
+    width:100%;
+    margin-top: 20px;
+    height: 100%;
+    max-height: 500px;
+    overflow: auto;
+    padding-right: 40px;
+    padding-right: 40px;
+    font-size: 15px;
+    overflow: hidden;
+}

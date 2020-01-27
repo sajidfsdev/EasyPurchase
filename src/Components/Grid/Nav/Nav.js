@@ -9,20 +9,27 @@ const Nav=(props)=>{
         <React.Fragment>
             <ul className={classes.ul}>
                 <li className={classes.li}>
-                    <NavLink to="/" className={classes.navlink} activeClassName={classes.active}>
+                    <NavLink exact to="/" className={classes.navlink} activeClassName={classes.active}>
                         <i className="fas fa-sitemap"></i>
                         &nbsp;&nbsp;
                         Categories
                     </NavLink>
                 </li>
                 <li className={classes.li}>
-                        <i className="fas fa-sitemap text-white"></i>
-                        <label className={classes.label}>Categories</label>
+                        <NavLink exact to="/profile" className={classes.navlink} activeClassName={classes.active}>
+                                <i className="fas fa-sitemap"></i>
+                                &nbsp;&nbsp;
+                                Profile
+                        </NavLink>
                 </li>
                 <li className={classes.li}>
-                        <i className="fas fa-sitemap text-white"></i>
-                        <label className={classes.label}>Categories</label>
-                </li>
+                    <i className="fas fa-sitemap text-white"></i>
+                            <NavLink exact to="/inbox" className={classes.navlink} activeClassName={classes.active}>
+                                <i className="fas fa-sitemap"></i>
+                                &nbsp;&nbsp;
+                                Inbox
+                            </NavLink>
+                    </li>
                 <li className={classes.li}>
                         <i className="fas fa-sitemap text-white"></i>
                         <label className={classes.label}>Categories</label>

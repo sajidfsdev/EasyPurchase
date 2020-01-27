@@ -5,6 +5,7 @@ import classes from './cat.module.css';
 
 //component imports......
 import TopBar from '../../Components/Categories/TopBar/TopBar';
+import Card from '../../Reusable/CatCard/CatCard';
 
 
 //Material UI work starts here....
@@ -25,12 +26,7 @@ const Cat=(props)=>{
     const UIclasses = useStyles();
 
     //state management starts here....
-    const [catState,setCatState]=useState([
-        "Electronics","Electronics","Electronics","Electronics",
-        "Electronics","Electronics","Electronics","Electronics",
-        "Electronics","Electronics","Electronics","Electronics",
-        "Electronics","Electronics","Electronics","Electronics",
-    ]);
+    const [catState,setCatState]=useState(["Electronics","Mobile","Laptop"]);
     //state management ends here......
 
     //return starts here.....
@@ -56,7 +52,28 @@ const Cat=(props)=>{
 
             {/* Screen Builder starts here....... */}
             <div className={classes.screen}>
-                
+                {
+                    catState.length===0?
+                    (
+                        <div></div>
+                    )
+                    :
+                    (
+                        <div className="container">
+                            <div className="row">
+                                {
+                                    catState.map((elem,index)=>{
+                                        return (
+                                            <div key={index} className="col">
+                                                <Card>{elem}</Card>
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </div>
+                        </div>
+                    )
+                }
             </div>
             {/* Screen Builder ends here......... */}
 

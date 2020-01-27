@@ -1,0 +1,13 @@
+.cart{
+    border:1px solid;
+    width:200px;
+    padding:10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-color: rgb(7, 58, 105); */
+    background-color: rgb(35, 111, 101);
+    color:white;
+    overflow: auto;
+    cursor: pointer;
+}

@@ -5,6 +5,8 @@ import classes from './Grid.module.css';
 import TopBar from '../Components/Grid/TopBar/TopBar';
 import Nav from '../Components/Grid/Nav/Nav';
 import Categories from '../Pages/Categories/cat';
+import Profile from '../Pages/Profile/Profile';
+import Inbox from '../Pages/Inbox/Inbox';
 
 const Grid=(props)=>{
 
@@ -26,6 +28,8 @@ const Grid=(props)=>{
                 <div className={classes.rightContainer}>
                     <Switch>
                         <Route exact path="/" component={Categories} />
+                        <Route exact path="/profile" component={Profile} />
+                        <Route exact path="/inbox" component={Inbox}/>
                     </Switch>
                 </div>
             </div>

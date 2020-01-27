@@ -1,0 +1,43 @@
+.heading{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+}
+
+.title{
+    font-size: 22px;
+    color:rgb(0, 128, 117);
+    
+}
+
+.avatar{
+    border:1px solid;
+    width:100px;
+    height:100px;
+    border-radius: 50px;
+}
+
+.strip{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.container{
+    width:100%;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+.btnDiv{
+    width:100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 10px;
+}
