@@ -5,18 +5,27 @@ const Bufferring=props=>{
 
     //style management starts here......
     const divStyle={
+        position:'absolute',
         width:'100%',
         height:'100vh',
         display:'flex',
         flexDirection:'column',
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
+        backgroundColor:'#fff',
+        zIndex:'500'
     };
 
     const imgStyle={
-        width:'200px',
-        height:'200px'
+        width:'150px',
+        height:'150px'
     }
+
+    const textStyle={
+        fontWeight:'bold',
+        color:'green',
+        fontSie:'17px'
+    };
     //style management ends here........
 
     //return statement starts here.....
@@ -24,6 +33,7 @@ const Bufferring=props=>{
         <React.Fragment>
             <div style={divStyle}>
                 <img style={imgStyle} className="img-fluid"  src={bufferring} />
+                <div style={textStyle}>Please Wait !</div>
             </div>
         </React.Fragment>
     );

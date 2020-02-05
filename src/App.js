@@ -1,6 +1,10 @@
 import React,{ useEffect } from 'react';
 import { useSelector,useDispatch } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import * as AuthActions from './Store/Action/Auth';
+
+//components starts....
+import Spinner from './Reusable/Bufferring/Bufferring';
 
 //pages imports......
 import LoginPage from './Pages/Login/Login';
@@ -11,13 +15,15 @@ const App=(props)=>{
 
   //redux state starts here......
   const auth_RP=useSelector(state=>state.auth.isAuth);
+  const app_buff_RP=useSelector(state=>state.app.bufferring);
   const resolved_RP=useSelector(state=>state.auth.resolved);
+  const dispatch=useDispatch();
   //redux state ends here........
 
  
   //use effect starts here......
   useEffect(()=>{
-
+      dispatch(AuthActions.handleAuthChecking());
   },[]);
   //use effect ends here........
 
@@ -43,9 +49,21 @@ const App=(props)=>{
   }
   //GUI man ends here..............
 
+
+  //Gen Bufferring starts here.....
+  let buff=null;
+  if(app_buff_RP)
+  {
+    buff=(<Spinner />);
+  }
+  //Gen bufferring ends............
+
   //return statement starts here......
   return (
     <React.Fragment>
+      {
+        buff
+      }
            <BrowserRouter>
               {mainGUI}
            </BrowserRouter>

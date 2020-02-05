@@ -7,20 +7,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 //Redux imports starts here......
-import { createStore,combineReducers,applyMiddleware } from 'redux';
+import { createStore,combineReducers,applyMiddleware,compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
 import AuthReducer from './Store/Reducer/Auth';
+import AppReducer from './Store/Reducer/App';
 //Redux imports ends here........
 
 
 //Reux management starts here.....
 const rootReducer=combineReducers({
-    auth:AuthReducer
+    auth:AuthReducer,
+    app:AppReducer
 })
 
-const store=createStore(rootReducer,applyMiddleware(thunk));
+const store=createStore(rootReducer,compose(applyMiddleware(thunk)));
 //Redux management ends here......
 
 ReactDOM.render(

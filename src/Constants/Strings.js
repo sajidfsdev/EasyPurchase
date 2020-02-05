@@ -1,3 +1,5 @@
-{
-    db:"mongodb+srv://<username>:<password>@cluster0-dvv1r.mongodb.net/test?retryWrites=true&w=majority"
+export default {
+    sessionStorage:"EPA-MEM",
+    server:"http://localhost:3000",
+    securityHeader:"x-auth-eptoken"
 }
